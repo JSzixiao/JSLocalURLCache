@@ -12,7 +12,7 @@
 
 #define JSLocalURLCacheLogSwitch 1 //开关，用于控制是否输出打印信息
 
-#define JSLocalURLCacheNeedReachability 0 //开关，用于控制是否需要网络
+#define JSLocalURLCacheNeedReachability 1 //开关，用于控制是否需要网络
 
 #if JSLocalURLCacheLogSwitch
 #define JSNSLog(s,...) NSLog(@"%s LINE:%d < %@ >",__FUNCTION__, __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__])

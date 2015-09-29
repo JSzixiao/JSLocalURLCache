@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B1D72F1130F50B14736FF8B /* libPods-JSLocalURLCacheDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0903C1372BB775CD3FF02F82 /* libPods-JSLocalURLCacheDemo.a */; };
 		3D6AFBC71BBA78D000F33FFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFBC61BBA78D000F33FFF /* main.m */; };
 		3D6AFBCA1BBA78D000F33FFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFBC91BBA78D000F33FFF /* AppDelegate.m */; };
 		3D6AFBCD1BBA78D000F33FFF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D6AFBCC1BBA78D000F33FFF /* ViewController.m */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0903C1372BB775CD3FF02F82 /* libPods-JSLocalURLCacheDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JSLocalURLCacheDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AFBC21BBA78D000F33FFF /* JSLocalURLCacheDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSLocalURLCacheDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D6AFBC61BBA78D000F33FFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D6AFBC81BBA78D000F33FFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		3D6AFBE11BBA792600F33FFF /* JSLocalURLCache.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = JSLocalURLCache.plist; sourceTree = "<group>"; };
 		3D6AFBE21BBA792600F33FFF /* JSLocalURLCacheUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSLocalURLCacheUtil.h; sourceTree = "<group>"; };
 		3D6AFBE31BBA792600F33FFF /* JSLocalURLCacheUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSLocalURLCacheUtil.m; sourceTree = "<group>"; };
+		ACAF4866B26B745E508C4683 /* Pods-JSLocalURLCacheDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSLocalURLCacheDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JSLocalURLCacheDemo/Pods-JSLocalURLCacheDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		ADED606B11A76A747A856797 /* Pods-JSLocalURLCacheDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSLocalURLCacheDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JSLocalURLCacheDemo/Pods-JSLocalURLCacheDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B1D72F1130F50B14736FF8B /* libPods-JSLocalURLCacheDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +60,8 @@
 			children = (
 				3D6AFBC41BBA78D000F33FFF /* JSLocalURLCacheDemo */,
 				3D6AFBC31BBA78D000F33FFF /* Products */,
+				3F3DCE683C0C17AD36795EC1 /* Pods */,
+				A70DC36FE9A97912236F9DBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +113,23 @@
 			path = ../../JSLocalURLCache;
 			sourceTree = "<group>";
 		};
+		3F3DCE683C0C17AD36795EC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACAF4866B26B745E508C4683 /* Pods-JSLocalURLCacheDemo.debug.xcconfig */,
+				ADED606B11A76A747A856797 /* Pods-JSLocalURLCacheDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A70DC36FE9A97912236F9DBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0903C1372BB775CD3FF02F82 /* libPods-JSLocalURLCacheDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -113,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D6AFBD91BBA78D100F33FFF /* Build configuration list for PBXNativeTarget "JSLocalURLCacheDemo" */;
 			buildPhases = (
+				3FDE0A1921EA91FF3F3FE546 /* Check Pods Manifest.lock */,
 				3D6AFBBE1BBA78D000F33FFF /* Sources */,
 				3D6AFBBF1BBA78D000F33FFF /* Frameworks */,
 				3D6AFBC01BBA78D000F33FFF /* Resources */,
+				35562524977B3C543E288F8E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +197,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35562524977B3C543E288F8E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JSLocalURLCacheDemo/Pods-JSLocalURLCacheDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDE0A1921EA91FF3F3FE546 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D6AFBBE1BBA78D000F33FFF /* Sources */ = {
@@ -292,6 +351,7 @@
 		};
 		3D6AFBDA1BBA78D100F33FFF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACAF4866B26B745E508C4683 /* Pods-JSLocalURLCacheDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSLocalURLCacheDemo/Info.plist;
@@ -304,6 +364,7 @@
 		};
 		3D6AFBDB1BBA78D100F33FFF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADED606B11A76A747A856797 /* Pods-JSLocalURLCacheDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = JSLocalURLCacheDemo/Info.plist;
@@ -333,6 +394,7 @@
 				3D6AFBDB1BBA78D100F33FFF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
