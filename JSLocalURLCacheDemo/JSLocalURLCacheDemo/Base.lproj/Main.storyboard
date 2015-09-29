@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-HO-gmU">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0gZ-Ru-XAB"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUo-46-9b3">
+                                <rect key="frame" x="0.0" y="20" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="7D0-pS-pqc"/>
+                                    <constraint firstAttribute="height" constant="40" id="9ZA-65-MVs"/>
+                                </constraints>
+                                <state key="normal" title="清空缓存"/>
+                                <connections>
+                                    <action selector="clearCacheFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bA-8l-7ZX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-Mp-XcA">
+                                <rect key="frame" x="540" y="20" width="60" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9zg-gf-ZkF"/>
+                                    <constraint firstAttribute="width" constant="60" id="sU5-g8-9fr"/>
+                                </constraints>
+                                <state key="normal" title="刷新"/>
+                                <connections>
+                                    <action selector="refreshFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Az3-LE-zkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uUo-46-9b3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5vW-vX-Pe8"/>
+                            <constraint firstItem="sCY-HO-gmU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6EQ-RN-Ifa"/>
+                            <constraint firstAttribute="trailing" secondItem="sCY-HO-gmU" secondAttribute="trailing" id="8Nm-6U-xlM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sCY-HO-gmU" secondAttribute="bottom" id="9ez-dV-eux"/>
+                            <constraint firstItem="sCY-HO-gmU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HPc-kR-ZyD"/>
+                            <constraint firstItem="Tl0-Mp-XcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oib-8h-4py"/>
+                            <constraint firstItem="uUo-46-9b3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a5c-vR-K9h"/>
+                            <constraint firstAttribute="trailing" secondItem="Tl0-Mp-XcA" secondAttribute="trailing" id="xUn-d5-PuF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="sCY-HO-gmU" id="POe-uf-My6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

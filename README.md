@@ -1,2 +1,3 @@
 # JSLocalURLCacheLib
-初次尝试制作podspec
+JSLocalURLCacheLib is used for local url cache.
+
