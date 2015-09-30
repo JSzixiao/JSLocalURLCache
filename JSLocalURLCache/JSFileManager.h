@@ -16,12 +16,14 @@
  *  @param srcFileName  源文件名称，该文件位于项目中
  *  @param srcExtension 源文件的扩展名
  *  @param destDir      目标文件
+ *  @param bundleName   bundle文件名称
  *
  *  @return 目标的文件路径
  */
 + (NSString *)getDestFilePathWithSrcFileName:(NSString *)srcFileName
                                SrcExtension:(NSString *)srcExtension
-                                    DestDir:(NSSearchPathDirectory)destDir;
+                                    DestDir:(NSSearchPathDirectory)destDir
+                                  BundleName:(NSString *)bundleName;
 
 /**
  *  保存键值对到plist文件内

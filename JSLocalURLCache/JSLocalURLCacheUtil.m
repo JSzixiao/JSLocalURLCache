@@ -10,8 +10,15 @@
 #import "JSFileManager.h"
 #import <CommonCrypto/CommonDigest.h>
 
+#define CachedURL_USE_Bundle 0 //开关，用于控制是否使用bundle
+
 #define WebCacheDirName @"JSWebCache" //缓存在本地存储的目录
 
+#if CachedURL_USE_Bundle
+#define CachedURLResponseBundleName @"JSFileManager" //缓存响应存储资源的bundlename
+#else
+#define CachedURLResponseBundleName nil //缓存响应存储资源的bundlename
+#endif
 #define CachedURLResponseFileName @"JSLocalURLCache" //缓存响应存储在本地的文件名称
 #define CachedURLResponseFileExtension @"plist" //缓存响应存储在本地的文件后缀
 
@@ -103,7 +110,8 @@
 {
     NSString *cachedPlistFilePath = [JSFileManager getDestFilePathWithSrcFileName:CachedURLResponseFileName
                                                                      SrcExtension:CachedURLResponseFileExtension
-                                                                          DestDir:NSCachesDirectory];
+                                                                          DestDir:NSCachesDirectory
+                                                                       BundleName:CachedURLResponseBundleName];
     
     return [JSFileManager saveIntoPlistFileWithFilePath:cachedPlistFilePath
                                                     Key:cacheFileName
@@ -115,7 +123,8 @@
 {
     NSString *cachedPlistFilePath = [JSFileManager getDestFilePathWithSrcFileName:CachedURLResponseFileName
                                                                      SrcExtension:CachedURLResponseFileExtension
-                                                                          DestDir:NSCachesDirectory];
+                                                                          DestDir:NSCachesDirectory
+                                                                       BundleName:CachedURLResponseBundleName];
     return [JSFileManager getObjectFromPlistFileWithFilePath:cachedPlistFilePath Key:cacheFileName];
 }
 
@@ -128,7 +137,8 @@
     }
     NSString *cachedPlistFilePath = [JSFileManager getDestFilePathWithSrcFileName:CachedURLResponseFileName
                                                                      SrcExtension:CachedURLResponseFileExtension
-                                                                          DestDir:NSCachesDirectory];
+                                                                          DestDir:NSCachesDirectory
+                                                                       BundleName:CachedURLResponseBundleName];
     return [JSFileManager deleteObjectFromPlistFileWithFilePath:cachedPlistFilePath Key:cacheFileName];
 }
 
@@ -137,7 +147,8 @@
 {
     NSString *cachedPlistFilePath = [JSFileManager getDestFilePathWithSrcFileName:CachedURLResponseFileName
                                                                      SrcExtension:CachedURLResponseFileExtension
-                                                                          DestDir:NSCachesDirectory];
+                                                                          DestDir:NSCachesDirectory
+                                                                       BundleName:CachedURLResponseBundleName];
     return [JSFileManager clearPlistFileWithFilePath:cachedPlistFilePath];
 }
 

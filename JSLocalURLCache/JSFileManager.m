@@ -14,10 +14,21 @@
 + (NSString *)getDestFilePathWithSrcFileName:(NSString *)srcFileName
                                      SrcExtension:(NSString *)srcExtension
                                     DestDir:(NSSearchPathDirectory)destDir
+                                  BundleName:(NSString *)bundleName
 {
+    NSBundle *resourceBundle = [NSBundle mainBundle];
     //plist文件在项目中的路径
-    NSString *plistInProjectDirPath = [[NSBundle mainBundle]
-                                       pathForResource:srcFileName ofType:srcExtension];
+    NSString *plistInProjectDirPath = nil;
+    
+    if (bundleName != nil) {
+        NSString * bundlePath = [resourceBundle pathForResource:bundleName ofType:@"Bundle"];
+        plistInProjectDirPath = [bundlePath stringByAppendingPathComponent:
+                                 [NSString stringWithFormat:@"%@.%@", srcFileName, srcExtension]];
+    } else {
+        plistInProjectDirPath = [resourceBundle
+                                 pathForResource:srcFileName ofType:srcExtension];
+    }
+    
     //缓存目录的路径
     NSString *plistInCacheDirPath = [NSSearchPathForDirectoriesInDomains(destDir,
                                                                          NSUserDomainMask,
