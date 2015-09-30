@@ -1,0 +1,6 @@
+framework module JSLocalURLCache {
+  umbrella header "JSLocalURLCache.h"
+
+  export *
+  module * { export * }
+}
