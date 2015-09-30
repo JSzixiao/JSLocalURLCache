@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author             = { "zixiao0306" => "zixiao0306@163.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/JSzixiao/JSLocalURLCache.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/JSzixiao/JSLocalURLCache.git", :tag => "0.0.5" }
   s.source_files  = "JSLocalURLCache/*.{h,m}"
   s.public_header_files = "JSLocalURLCache/JSLocalURLCache.h"
   s.resources = "JSLocalURLCache/JSLocalURLCache.plist"
