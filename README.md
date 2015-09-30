@@ -1,3 +1,3 @@
-# JSLocalURLCacheLib
-JSLocalURLCacheLib is used for local url cache.
+# JSLocalURLCache
+JSLocalURLCache is used for local url cache.
 

@@ -15,16 +15,16 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "JSLocalURLCacheLib"
+  s.name         = "JSLocalURLCache"
   s.version      = "0.0.1"
-  s.summary      = "JSLocalURLCacheLib is used for local url cache."
+  s.summary      = "JSLocalURLCache is used for local url cache."
 
   s.description  = <<-DESC
-                   JSLocalURLCacheLib is used for local url cache.
+                   JSLocalURLCache is used for local url cache.
                    URL can be opened when net not supported.
                    DESC
 
-  s.homepage     = "https://github.com/JSzixiao/JSLocalURLCacheLib"
+  s.homepage     = "https://github.com/JSzixiao/JSLocalURLCache"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -75,7 +75,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/JSzixiao/JSLocalURLCacheLib.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/JSzixiao/JSLocalURLCache.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
