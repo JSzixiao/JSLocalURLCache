@@ -148,7 +148,31 @@
     } else {
         JSNSLog(@"不需要缓存");
     }
+}
+
+#pragma mark - 获取缓存大小
++ (float)getCachedResponsesSize
+{
+    return [JSLocalURLCacheUtil getWebCacheDirSize];
+}
+
++ (NSString *)getCachedResponsesSizeToShow
+{
+    float value = 1024;
+    NSArray *unitArray = @[ @"K", @"M", @"G", @"T"];
+    NSString *unit = @"B";
+    float size = [self getCachedResponsesSize];
     
+    for (int i = 0; i < unitArray.count; ++i) {
+        if (size >= value) {
+            size /= value;
+            unit = unitArray[i];
+        } else {
+            break;
+        }
+    }
+    
+    return [NSString stringWithFormat:@"%.0f %@", size, unit];
 }
 
 #pragma mark - 清除所有缓存

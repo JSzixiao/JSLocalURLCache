@@ -42,6 +42,18 @@
     [[JSLocalURLCache sharedURLCache] removeAllCachedResponses];
 }
 
+/**
+ *  显示缓存大小
+ *
+ *  @param sender
+ */
+- (IBAction)showCacheSizeFunction:(id)sender
+{
+    UIButton *tmpButton = (UIButton *)sender;
+    [tmpButton setTitle:[JSLocalURLCache getCachedResponsesSizeToShow] forState:UIControlStateNormal];
+}
+
+
 - (NSURLRequest *)getCurrentRequest
 {
     NSString *tmpUrlString = @"http://www.baidu.com";

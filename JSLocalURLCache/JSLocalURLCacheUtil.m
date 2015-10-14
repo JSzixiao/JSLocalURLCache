@@ -96,6 +96,14 @@
     return webCacheDirPath;
 }
 
+#pragma mark - 获取缓存大小
++ (float)getWebCacheDirSize
+{
+    NSString *webCacheDirPath = [self getWebCacheDirPathWithNeedToCreate:NO];
+    
+    return [JSFileManager folderSizeAtPath:webCacheDirPath];
+}
+
 #pragma mark - 删除缓存目录
 + (BOOL)removeWebCacheDir
 {

@@ -56,6 +56,13 @@
 + (NSString *)getWebCacheDirPathWithNeedToCreate:(BOOL)needCreate;
 
 /**
+ *  获取缓存大小
+ *
+ *  @return 缓存大小
+ */
++ (float)getWebCacheDirSize;
+
+/**
  *  删除缓存目录
  *
  *  @return 返回删除是否成功

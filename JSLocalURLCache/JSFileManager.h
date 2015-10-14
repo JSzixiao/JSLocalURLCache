@@ -67,4 +67,8 @@
  */
 + (BOOL)clearPlistFileWithFilePath:(NSString *)filePath;
 
++ (long long)fileSizeAtPath:(NSString*)filePath;
+
++ (float)folderSizeAtPath:(NSString*)folderPath;
+
 @end

@@ -18,4 +18,8 @@
 - (void)removeAllCachedResponses;
 
 - (void)removeCachedResponseForRequest:(NSURLRequest *)request;
+
++ (float)getCachedResponsesSize;
+
++ (NSString *)getCachedResponsesSizeToShow;
 @end

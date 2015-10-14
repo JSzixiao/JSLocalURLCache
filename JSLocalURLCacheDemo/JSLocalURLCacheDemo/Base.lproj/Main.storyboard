@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
@@ -18,6 +19,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sCY-HO-gmU">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="0gZ-Ru-XAB"/>
@@ -25,6 +27,7 @@
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUo-46-9b3">
                                 <rect key="frame" x="0.0" y="20" width="80" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="7D0-pS-pqc"/>
@@ -37,6 +40,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-Mp-XcA">
                                 <rect key="frame" x="540" y="20" width="60" height="40"/>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="9zg-gf-ZkF"/>
@@ -47,7 +51,20 @@
                                     <action selector="refreshFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Az3-LE-zkY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihY-yl-TgR">
+                                <rect key="frame" x="260" y="20" width="80" height="40"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Ec2-1d-0By"/>
+                                </constraints>
+                                <state key="normal" title="缓存大小"/>
+                                <connections>
+                                    <action selector="showCacheSizeFunction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ApD-PD-TaT"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uUo-46-9b3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5vW-vX-Pe8"/>
@@ -56,7 +73,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sCY-HO-gmU" secondAttribute="bottom" id="9ez-dV-eux"/>
                             <constraint firstItem="sCY-HO-gmU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HPc-kR-ZyD"/>
                             <constraint firstItem="Tl0-Mp-XcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Oib-8h-4py"/>
+                            <constraint firstItem="ihY-yl-TgR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PUW-SZ-Pwv"/>
+                            <constraint firstItem="ihY-yl-TgR" firstAttribute="height" secondItem="uUo-46-9b3" secondAttribute="height" id="Yto-fB-0jq"/>
                             <constraint firstItem="uUo-46-9b3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="a5c-vR-K9h"/>
+                            <constraint firstItem="ihY-yl-TgR" firstAttribute="top" secondItem="uUo-46-9b3" secondAttribute="top" id="ejX-RB-7yt"/>
                             <constraint firstAttribute="trailing" secondItem="Tl0-Mp-XcA" secondAttribute="trailing" id="xUn-d5-PuF"/>
                         </constraints>
                     </view>
